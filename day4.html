@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 4 </title>
+ 
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+:root {
+	--white: #F2F1DF;
+	--blue: #5058F2;
+	--babyblue: #6B71F2;
+	--blueshadow: #262A73;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background-color: var(--blue);
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	z-index: -1;
+}
+
+.center {
+	top: 100px;
+	left: 100px;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.dot-1 {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 100px;
+	height: 100px;
+	background-color: var(--white);
+	border-radius: 50%;
+	z-index: 2;
+	animation: dot-1-dance 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+}
+
+.dot-2 {
+	position: absolute;
+	top: 68px;
+	left: 68px;
+	width: 65px;
+	height: 65px;
+	background-color: var(--white);
+	border-radius: 50%;
+	z-index: 3;
+	animation: dot-2-dance 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) .15s infinite alternate both;
+}
+
+.dot-3 {
+	position: absolute;
+	top: 85px;
+	left: 85px;
+	width: 32px;
+	height: 32px;
+	background-color: var(--white);
+	border-radius: 50%;
+	z-index: 4;
+	animation: dot-3-dance 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) .3s infinite alternate both;
+}
+
+
+
+/* Keyframes */
+
+@keyframes dot-1-dance {
+  0%, 10% {
+    transform: scale(0);
+    opacity: .25;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+		box-shadow: 2px 2px 12px 4px rgba(0,0,0,0.25);
+  }
+}
+
+@keyframes dot-2-dance {
+  0%, 40% {
+    transform: scale(0);
+    opacity: .25;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+		box-shadow: 1.5px 1.5px 8px 1.5px rgba(0,0,0,0.25);
+  }
+}
+
+@keyframes dot-3-dance {
+  0%, 70% {
+    transform: scale(0);
+    opacity: .25;
+  }
+	100% {
+    transform: scale(1);
+    opacity: 1;
+		box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.25);
+  }
+}
+</style>
+<body>
+    <div class="frame">
+        <div class="center">
+              <div class="dot-1"></div>
+              <div class="dot-2"></div>
+              <div class="dot-3"></div>
+        </div>
+      </div>
+</body>
+</html>
